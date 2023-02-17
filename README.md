@@ -31,7 +31,7 @@ Anchors have a special meaning in regular expressions. They do not match any cha
 In this example ```/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/```:
   - The `^` is initializing the start of our text at the next index
   - The `$` is concluding the end of our text and the index before it
-  So after this component we have ```(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?```
+  - After this component we have a value of ```(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?```
 
 ### Quantifiers
 
