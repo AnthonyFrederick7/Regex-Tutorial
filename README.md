@@ -1,10 +1,10 @@
-# Title (replace with your title)
+# Regex Tutorial
 
-Introductory paragraph (replace this with your text)
+Regular expressions or Regex expressions are patterns used to match character combinations in strings. In JavaScript, regex expressions are also objects. This tutorial will use a regex expression to check if a URL is valid.
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+This tutorial will break down the following regex expression `/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/` into its components. This regex expression will solve if the input is a valid URL.
 
 ## Table of Contents
 
@@ -39,3 +39,7 @@ Briefly summarize the regex you will be describing and what you will explain. In
 ### Greedy and Lazy Match
 
 ### Boundaries
+
+### Author
+
+This tutorial was created by [Anthony Frederick](https://github.com/AnthonyFrederick7)
