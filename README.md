@@ -28,7 +28,7 @@ Anchors have a special meaning in regular expressions. There are 2 anchors, they
   - `^` – The caret anchor matches the beginning of the text.
   - `$` – The dollar anchor matches the end of the text.
 
-We can test simple regex expressions with anchors by these examples:
+We can test simple regex expressions with anchors by this example:
 
 ```
 let website = 'https://github.com'
@@ -36,7 +36,7 @@ console.log(/^(https)/.test(website))
 console.log(/(.com)$/.test(website))
 ```
 
-These will both console.log `true` because the `/^(https)/` will match any text that starts with the letters `https` and `/(.com)$/` will match any text that ends with the letters `.com`.
+Both console.logs will be `true` because the `/^(https)/` will match any text that starts with the letters `https` and `/(.com)$/` will match any text that ends with the letters `.com`.
 
 ### Quantifiers
 
