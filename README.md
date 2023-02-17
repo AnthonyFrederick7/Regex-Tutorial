@@ -24,6 +24,15 @@ This tutorial will break down the following regex expression ```/^(https?:\/\/)?
 
 ### Anchors
 
+Anchors have a special meaning in regular expressions. They do not match any character. Instead, they match a position before or after characters:
+  - `^` – The caret anchor matches the beginning of the text.
+  - `$` – The dollar anchor matches the end of the text.
+
+In this example ```/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/```:
+  - The `^` is initializing the start of our text at the next index
+  - The `$` is concluding the end of our text and the index before it
+  So after this component we have ```(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?```
+
 ### Quantifiers
 
 ### OR Operator
