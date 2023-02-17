@@ -4,7 +4,7 @@ Regular expressions or Regex expressions are patterns used to match character co
 
 ## Summary
 
-This tutorial will break down the following regex expression ```/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/``` into its components. This complete regex expression will solve if the input is a valid URL.
+This tutorial will break down the following regex expression ```/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/``` into its components. This regex expression will solve if the input is a valid URL.
 
 ## Table of Contents
 
