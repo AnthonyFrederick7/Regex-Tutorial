@@ -56,11 +56,11 @@ Our regex expression has FOUR types of Quantifiers.
 
 `?`
   - The Shorthand `?` means zero or one. It is the same as `{0,1}`.
-  - `https?`, `(https?:\/\/)?`, and `/?` is using the `?` quantifier to allow the text to not exist or to exist ONCE.
+  - `https?`, `(https?:\/\/)?`, and `/?` in our regex expression is using the `?` quantifier to allow the text to not exist or to exist ONCE.
 
 `*`
   - The Shorthand `*` means zero or more. It is the same as `{0,}`.
-  - `[\/\w \.-]*` and `([\/\w \.-]*)*` is using the `*` quantifier to allow the text to not exist or to exist an unlimited amount of times.
+  - `[\/\w \.-]*` and `([\/\w \.-]*)*` in our regex expression is using the `*` quantifier to allow the text to not exist or to exist an unlimited amount of times.
 
 ### Character Classes
 
@@ -70,28 +70,24 @@ Our regex expression has THREE types of Character Classes.
 
 `\d`
   - `\d` matches any digit thats quivalent to `[0-9]`.
-  - In our regex example 
+  - `\da-z\` in our regex expression is allowing the input to match any character from a-z AND using the `\d` Character Class to match any numerical digit 0-9.
 
 `\w` 
   - `\w` matches any alphanumeric character from the basic Latin alphabet, including the underscore. Its equivalent to `[A-Za-z0-9_]`.
-
-  - In our regex example 
+  - `\w` in our regex expression is using a character class to match any characters in the basic Latin alphabet that follow after the webistes domain.
 
 `.` 
-  - `.` can have TWO of the following meanings:
+  - The Wildcard `.` can have TWO of the following meanings:
     - `.` can match any single character except line terminators: \n, \r, \u2028 or \u2029.
     - Inside a character class, the dot loses its special meaning and matches a literal dot.
-  - In our regex example 
+  - In our regex expression `[\da-z\.-]` and `[\/\w \.-]` is matching any character inside its scope.
+  - In our regex expression ````([\da-z\.-]+)` + `\.` +`([a-z\.]{2,6})([\/\w \.-]*)````, the `\.` is being used as a literal dot.
 
 ### Bracket Expressions
 
 Bracket Expressions indicate a set of characters to match. Any individual character between the brackets will match, and you can also use a hyphen to define a set.
 
-Our regex expression has 
-
-### Greedy and Lazy Match
-
-### Boundaries
+Our regex expression has THREE bracket expressions: `[\da-z\.-]`, `[a-z\.]` and `[\/\w \.-]` all indicating a set of characters to match.
 
 ### Author
 
