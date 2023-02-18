@@ -10,15 +10,9 @@ This tutorial will break down the following regex expression ```/^(https?:\/\/)?
 
 - [Anchors](#anchors)
 - [Quantifiers](#quantifiers)
-- [OR Operator](#or-operator)
-- [Character Classes](#character-classes)
-- [Flags](#flags)
 - [Grouping and Capturing](#grouping-and-capturing)
+- [Character Classes](#character-classes)
 - [Bracket Expressions](#bracket-expressions)
-- [Greedy and Lazy Match](#greedy-and-lazy-match)
-- [Boundaries](#boundaries)
-- [Back-references](#back-references)
-- [Look-ahead and Look-behind](#look-ahead-and-look-behind)
 
 ## Regex Components
 
@@ -62,6 +56,13 @@ Our regex expression has FOUR types of Quantifiers.
   - The Shorthand `*` means zero or more. It is the same as `{0,}`.
   - `[\/\w \.-]*` and `([\/\w \.-]*)*` in our regex expression is using the `*` quantifier to allow the text to not exist or to exist an unlimited amount of times.
 
+### Grouping and Capturing
+
+A regex expression may have multiple capture groups. In results, matches to capturing groups typically in an array whose members are in the same order as the left parentheses in the capturing group. This is usually just the order of the capturing groups themselves. This becomes important when capturing groups are nested.
+
+Our regex expression has FOUR capture groups: `(https?:\/\/)`, `([\da-z\.-]+)`, `([a-z\.]{2,6})` and `([\/\w \.-]*)`.
+
+
 ### Character Classes
 
 A character class allows you to match any symbol from a certain character set. A character class is also called a character set.
@@ -80,8 +81,8 @@ Our regex expression has THREE types of Character Classes.
   - The Wildcard `.` can have TWO of the following meanings:
     - `.` can match any single character except line terminators: \n, \r, \u2028 or \u2029.
     - Inside a character class, the dot loses its special meaning and matches a literal dot.
-  - In our regex expression `[\da-z\.-]` and `[\/\w \.-]` is matching any character inside its scope.
-  - In our regex expression ````([\da-z\.-]+)` + `\.` +`([a-z\.]{2,6})([\/\w \.-]*)````, the `\.` is being used as a literal dot.
+  - In our regex expression `[\da-z\.-]` and `[\/\w \.-]` are matching any characters inside its scope.
+  - In our regex expression ````/^(https?:\/\/)?([\da-z\.-]+) + \. + ([a-z\.]{2,6})([\/\w \.-]*)*\/?$/````, the `\.` is being used as a literal dot.
 
 ### Bracket Expressions
 
