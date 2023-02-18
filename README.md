@@ -24,7 +24,7 @@ This tutorial will break down the following regex expression ```/^(https?:\/\/)?
 
 ### Anchors
 
-Anchors have a special meaning in regular expressions. There are 2 anchors, they do not match any character. Instead, they match a position before or after characters:
+Anchors have a special meaning in regular expressions. There are TWO anchors, they do not match any character. Instead, they match a position before or after characters:
   - `^` – The caret anchor matches the beginning of the text.
   - `$` – The dollar anchor matches the end of the text.
 
@@ -45,31 +45,49 @@ Both console.logs will be `true` because the `/^(https)/` will match any text th
 Quantifiers match a number of instances of a character, group, or character class in a string.
 
 Our regex expression has FOUR types of Quantifiers.
-#### The range `{n, m}`
-  - The range matches a character or character class from `n` to `m` times.
+
+1. `{n, m}`
+  - The Range `{n, m}` matches a character or character class from `n` to `m` times.
   - `{2,6}` in our regex epression is allowing `[a-z\.]` to have 2 to 6 characters in length.
 
-#### The Shorthand `+`
-  - `+` is short for `{1,}`. It will search from the first index to last inside its capture.
+2. `+`
+  - The Shorthand `+` is short for `{1,}`. It will search from the first index to last inside its capture.
   - `+` in our regex expression is allowing `[\da-z\.-]` to have any amount of characters from 1 to unlimited.
 
-#### The Shorthand `?`
-  - `?` means zero or one. It is the same as `{0,1}`.
+3. `?`
+  - The Shorthand `?` means zero or one. It is the same as `{0,1}`.
   - `https?`, `(https?:\/\/)?`, and `/?` is using the `?` quantifier to allow the text to not exist or to exist ONCE.
 
-#### The Shorthand `*`
-  - The quantifier `*` means zero or more. It is the same as `{0,}`.
+4. `*`
+  - The Shorthand `*` means zero or more. It is the same as `{0,}`.
   - `[\/\w \.-]*` and `([\/\w \.-]*)*` is using the `*` quantifier to allow the text to not exist or to exist an unlimited amount of times.
-
-### OR Operator
 
 ### Character Classes
 
-### Flags
+A character class allows you to match any symbol from a certain character set. A character class is also called a character set.
 
-### Grouping and Capturing
+Our regex expression has THREE types of Character Classes.
+
+1. `\d`
+  - `\d` matches any digit thats quivalent to `[0-9]`.
+  - In our regex example 
+
+2. `\w` 
+  - `\w` matches any alphanumeric character from the basic Latin alphabet, including the underscore. Its equivalent to `[A-Za-z0-9_]`.
+
+  - In our regex example 
+
+3. `.` 
+  - `.` can have TWO of the following meanings:
+    - `.` can match any single character except line terminators: \n, \r, \u2028 or \u2029.
+    - Inside a character class, the dot loses its special meaning and matches a literal dot.
+  - In our regex example 
 
 ### Bracket Expressions
+
+Bracket Expressions indicate a set of characters to match. Any individual character between the brackets will match, and you can also use a hyphen to define a set.
+
+Our regex expression has 
 
 ### Greedy and Lazy Match
 
