@@ -45,20 +45,19 @@ Both console.logs will be `true` because the `/^(https)/` will match any text th
 Quantifiers match a number of instances of a character, group, or character class in a string.
 
 Our regex expression has FOUR types of Quantifiers.
-
-1. The range `{n, m}`
+#### The range `{n, m}`
   - The range matches a character or character class from `n` to `m` times.
   - `{2,6}` in our regex epression is allowing `[a-z\.]` to have 2 to 6 characters in length.
 
-2. The Shorthand `+`
+#### The Shorthand `+`
   - `+` is short for `{1,}`. It will search from the first index to last inside its capture.
   - `+` in our regex expression is allowing `[\da-z\.-]` to have any amount of characters from 1 to unlimited.
 
-3. The Shorthand `?`
+#### The Shorthand `?`
   - `?` means zero or one. It is the same as `{0,1}`.
   - `https?`, `(https?:\/\/)?`, and `/?` is using the `?` quantifier to allow the text to not exist or to exist ONCE.
 
-4. The Shorthand `*`
+#### The Shorthand `*`
   - The quantifier `*` means zero or more. It is the same as `{0,}`.
   - `[\/\w \.-]*` and `([\/\w \.-]*)*` is using the `*` quantifier to allow the text to not exist or to exist an unlimited amount of times.
 
