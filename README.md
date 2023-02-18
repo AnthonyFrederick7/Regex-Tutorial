@@ -46,19 +46,19 @@ Quantifiers match a number of instances of a character, group, or character clas
 
 Our regex expression has FOUR types of Quantifiers.
 
-#### 1. `{n, m}`
+`{n, m}`
   - The Range `{n, m}` matches a character or character class from `n` to `m` times.
   - `{2,6}` in our regex epression is allowing `[a-z\.]` to have 2 to 6 characters in length.
 
-#### 2. `+`
+`+`
   - The Shorthand `+` is short for `{1,}`. It will search from the first index to last inside its capture.
   - `+` in our regex expression is allowing `[\da-z\.-]` to have any amount of characters from 1 to unlimited.
 
-#### 3. `?`
+`?`
   - The Shorthand `?` means zero or one. It is the same as `{0,1}`.
   - `https?`, `(https?:\/\/)?`, and `/?` is using the `?` quantifier to allow the text to not exist or to exist ONCE.
 
-#### 4. `*`
+`*`
   - The Shorthand `*` means zero or more. It is the same as `{0,}`.
   - `[\/\w \.-]*` and `([\/\w \.-]*)*` is using the `*` quantifier to allow the text to not exist or to exist an unlimited amount of times.
 
@@ -68,16 +68,16 @@ A character class allows you to match any symbol from a certain character set. A
 
 Our regex expression has THREE types of Character Classes.
 
-#### 1. `\d`
+`\d`
   - `\d` matches any digit thats quivalent to `[0-9]`.
   - In our regex example 
 
-#### 2. `\w` 
+`\w` 
   - `\w` matches any alphanumeric character from the basic Latin alphabet, including the underscore. Its equivalent to `[A-Za-z0-9_]`.
 
   - In our regex example 
 
-#### 3. `.` 
+`.` 
   - `.` can have TWO of the following meanings:
     - `.` can match any single character except line terminators: \n, \r, \u2028 or \u2029.
     - Inside a character class, the dot loses its special meaning and matches a literal dot.
